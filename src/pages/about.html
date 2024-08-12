@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - AutoBlog</title>
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="/src/pages/home.html" class="header__logo">AutoBlog</a>
+            <input type="checkbox" id="header__checkbox" class="header__checkbox">
+            <label for="header__checkbox" class="header__toggle">
+                <span class="header__toggle-line"></span>
+            </label>
+            <div class="language-selector">
+            </div>
+            <div class="header__menu-backdrop"></div>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="/src/pages/home.html" class="header__link" data-i18n="home"></a>
+                </li>
+                <li class="header__menu-item header__menu-item--has-submenu">
+                    <input type="checkbox" id="submenu-toggle" class="header__submenu-toggle" />
+                    <label for="submenu-toggle" class="header__link" data-i18n="categories"></label>
+                    <ul class="header__submenu">
+                        <li>
+                            <a href="/src/pages/categorias/category-deportivos.html" class="header__sublink"
+                                data-i18n="sportsCars"></a>
+                        </li>
+                        <li>
+                            <a href="/src/pages/categorias/category-carrera.html" class="header__sublink"
+                                data-i18n="raceCars"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/src/pages/about.html" class="header__link" data-i18n="about"></a>
+                </li>
+                <li class="header__menu-item header__menu-item--user">
+                    <span id="userDisplay" class="header__user-display"></span>
+                </li>
+                <li class="header__menu-item">
+                    <button id="logoutButton" class="header__logout" data-i18n="logout"></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero hero--about">
+            <div class="hero__image-container">
+                <img src="/src/assets/img/Hero-About.jpg" alt="Imagen de héroe" class="hero__image">
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__title" data-i18n="aboutHeroTitle"></h1>
+                <p class="hero__subtitle" data-i18n="aboutHeroSubtitle"></p>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__content">
+                <h2 class="about__title" data-i18n="aboutAuthorTitle"></h2>
+                <div class="about__author">
+                    <img src="/src/assets/img/autor.jpg" alt="Guillermo Solórzano Ochoa" class="about__author-image">
+                    <div class="about__author-info">
+                        <h3 class="about__author-name">Guillermo Solórzano Ochoa</h3>
+                        <p class="about__author-role" data-i18n="aboutAuthorRole"></p>
+                        <p class="about__text" data-i18n="aboutAuthorBio"></p>
+                        <div class="about__social-links">
+                            <a href="https://github.com/Memo977" target="_blank" class="about__social-link">
+                                <i class="fab fa-github"></i> GitHub
+                                <span data-i18n="githubDescription"></span>
+                            </a>
+                            <a href="https://www.facebook.com/guillermo.ochoa.50/" target="_blank"
+                                class="about__social-link">
+                                <i class="fab fa-facebook"></i> Facebook
+                                <span data-i18n="facebookDescription"></span>
+                            </a>
+                            <a href="https://www.instagram.com/memoochoa97/" target="_blank" class="about__social-link">
+                                <i class="fab fa-instagram"></i> Instagram
+                                <span data-i18n="instagramDescription"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="about__title" data-i18n="aboutAutoBlogTitle"></h2>
+                <p class="about__text" data-i18n="aboutAutoBlogDescription"></p>
+                <h2 class="about__title" data-i18n="aboutSimilarSitesTitle"></h2>
+                <ul class="about__similar-sites">
+                    <li>
+                        <a href="https://www.autoblog.com/" target="_blank">Autoblog.com</a> -
+                        <span data-i18n="autoblogDescription"></span>
+                    </li>
+                    <li>
+                        <a href="https://www.motortrend.com/" target="_blank">MotorTrend</a> -
+                        <span data-i18n="motorTrendDescription"></span>
+                    </li>
+                    <li>
+                        <a href="https://www.caranddriver.com/" target="_blank">Car and Driver</a> -
+                        <span data-i18n="carAndDriverDescription"></span>
+                    </li>
+                    <li>
+                        <a href="https://www.topgear.com/" target="_blank">Top Gear</a> -
+                        <span data-i18n="topGearDescription"></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        <span class="theme-toggle__slider" aria-hidden="true"></span>
+    </button>
+    <footer class="footer">
+        <p></p>
+    </footer>
+    <script src="/src/js/theme.js"></script>
+    <script src="/src/js/auth.js"></script>
+    <script src="/src/js/i18n.js"></script>
+</body>
+</html>

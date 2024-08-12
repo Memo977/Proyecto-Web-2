@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AutoBlog</title>
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="/src/pages/home.html" class="header__logo">AutoBlog</a>
+            <div class="language-selector"></div>
+            <div class="header__menu-backdrop"></div>
+        </nav>
+    </header>
+    <div class="login">
+        <form id="loginForm" class="login__form">
+            <h2 class="login__title"></h2>
+            <div class="login__field">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" required>
+                <span class="login__icon">✉️</span>
+            </div>
+            <div class="login__field">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required>
+                <span id="togglePassword" class="login__icon">🔓</span>
+            </div>
+            <div id="loginError" class="login__error"></div>
+            <button type="submit" class="login__submit"></button>
+        </form>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        <span class="theme-toggle__slider" aria-hidden="true"></span>
+    </button>
+    <footer class="footer">
+        <p></p>
+    </footer>
+    <script src="/src/js/theme.js"></script>
+    <script src="/src/js/i18n.js"></script>
+    <script src="/src/js/login.js"></script>
+</body>
+</html>

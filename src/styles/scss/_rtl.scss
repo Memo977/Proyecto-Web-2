@@ -1,0 +1,13 @@
+body[dir="rtl"] {
+  text-align: right;
+}
+
+body[dir="rtl"] .nav-home,
+body[dir="rtl"] .nav-categories,
+body[dir="rtl"] .nav-about {
+  float: right;
+}
+
+body[dir="rtl"] .language-selector {
+  float: left;
+}

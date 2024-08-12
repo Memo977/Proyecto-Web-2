@@ -1,0 +1,57 @@
+// Importar archivos parciales
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'header';
+@import 'hero';
+@import 'posts';
+@import 'post-card';
+@import 'post';
+@import 'about';
+@import 'footer';
+@import 'search';
+@import 'login';
+@import 'rtl';
+@import 'theme-toggle';
+
+// Ajustes responsivos adicionales
+@media (max-width: 767px) {
+  .hero {
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+
+    &--post {
+      .hero__title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .post {
+    &__meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__author,
+    &__date {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Ajustes para modo paisaje en dispositivos móviles
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    height: 70vh;
+
+    &--post {
+      height: 60vh;
+    }
+  }
+}

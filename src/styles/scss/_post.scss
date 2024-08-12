@@ -1,0 +1,91 @@
+// Estilos para la página individual de post
+.post {
+  max-width: 100%;
+  margin: -50px auto 0;
+  padding: 1.5rem;
+  background-color: $primary-color;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  @include mobile-first(768px) {
+    max-width: 800px;
+    margin: -100px auto 0;
+    padding: 2rem;
+  }
+
+  // Encabezado del post
+  &__header {
+    margin-bottom: 1.5rem;
+  }
+
+  // Metadatos del post
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: $text-color;
+  }
+
+  // Autor y fecha
+  &__author,
+  &__date {
+    margin: 0;
+  }
+
+  // Calificación del post
+  &__rating {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: $accent-color;
+    cursor: pointer;
+  }
+
+  // Estrellas de calificación
+  &__star {
+    opacity: 0.3;
+
+    &--filled {
+      opacity: 1;
+    }
+  }
+
+  // Título oculto (para SEO)
+  &__title {
+    &--hidden {
+      position: absolute;
+      width: 1px; 
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+
+  // Contenido del post
+  &__content {
+    color: $text-color;
+    line-height: 1.8;
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+      color: $accent-color;
+
+      @include mobile-first(768px) {
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}

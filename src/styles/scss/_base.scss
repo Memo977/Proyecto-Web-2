@@ -1,0 +1,61 @@
+// Estilos base para el body
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Estilos base para enlaces
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Estilos base para encabezados
+h1, h2, h3, h4, h5, h6 {
+  color: $dark-text-color;
+  margin-top: 0;
+}
+
+// Estilos base para párrafos
+p {
+  margin-bottom: 1rem;
+}
+
+// Estilos base para imágenes
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Estilos base para contenedores
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Estilos base para botones
+.btn {
+  display: inline-block;
+  background-color: $accent-color;
+  color: $text-color;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--accent-color-dark);
+  }
+}

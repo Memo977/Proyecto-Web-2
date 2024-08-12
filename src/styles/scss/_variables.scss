@@ -1,0 +1,62 @@
+// Colores para el tema oscuro
+$dark-primary-color: #1e2129;
+$dark-secondary-color: #2a2e38;
+$dark-accent-color: #e74c3c;
+$dark-text-color: #ffffff;
+$dark-background-color: #191c24;
+
+// Colores oscurecidos para el tema oscuro
+$dark-accent-color-dark: darken($dark-accent-color, 10%);
+$dark-primary-color-dark: darken($dark-primary-color, 5%);
+$dark-text-color-dark: darken($dark-text-color, 20%);
+
+// Colores aclarados para el tema oscuro
+$dark-accent-color-light: lighten($dark-accent-color, 10%);
+
+// Colores para el tema claro
+$light-primary-color: #ffffff;
+$light-secondary-color: #f5f5f5;
+$light-accent-color: #e74c3c;
+$light-text-color: #333333;
+$light-background-color: #f0f0f0;
+
+// Colores oscurecidos para el tema claro
+$light-accent-color-dark: darken($light-accent-color, 10%);
+$light-primary-color-dark: darken($light-primary-color, 5%);
+$light-text-color-dark: darken($light-text-color, 20%);
+
+// Colores aclarados para el tema claro
+$light-accent-color-light: lighten($light-accent-color, 10%);
+
+// Variables globales de color
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$accent-color: var(--accent-color);
+$text-color: var(--text-color);
+$background-color: var(--background-color);
+
+// Definición de variables CSS para ambos temas
+:root {
+  --primary-color: #{$dark-primary-color};
+  --primary-color-dark: #{$dark-primary-color-dark};
+  --secondary-color: #{$dark-secondary-color};
+  --accent-color: #{$dark-accent-color};
+  --accent-color-dark: #{$dark-accent-color-dark};
+  --accent-color-light: #{$dark-accent-color-light};
+  --text-color: #{$dark-text-color};
+  --text-color-dark: #{$dark-text-color-dark};
+  --background-color: #{$dark-background-color};
+}
+
+body.light-theme {
+  --primary-color: #{$light-primary-color};
+  --primary-color-dark: #{$light-primary-color-dark};
+  --secondary-color: #{$light-secondary-color};
+  --accent-color: #{$light-accent-color};
+  --accent-color-dark: #{$light-accent-color-dark};
+  --accent-color-light: #{$light-accent-color-light};
+  --text-color: #{$light-text-color};
+  --text-color2:#{$dark-text-color};
+  --text-color-dark: #{$light-text-color-dark};
+  --background-color: #{$light-background-color};
+}

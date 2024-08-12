@@ -1,0 +1,56 @@
+// Estilos para la sección de posts
+.posts {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include mobile-first(768px) {
+    padding: 4rem 2rem;
+  }
+
+  // Título de la sección de posts
+  &__title {
+    text-align: left;
+    margin-bottom: 2rem;
+    color: $text-color;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 70%;
+      background-color: $accent-color;
+    }
+
+    @include mobile-first(768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  // Grid de posts
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @include mobile-first(768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-first(1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile-first(1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
